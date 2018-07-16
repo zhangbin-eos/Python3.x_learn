@@ -1,0 +1,153 @@
+
+>>> ser.write(b'ajfgaljhsdgfjhdgfjshdf\r\n')
+24
+>>>
+>>>
+>>> ser.write('*********************************')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "C:\Users\liguo\AppData\Local\Programs\Python\Python36-32\lib\site-packag
+es\serial\serialwin32.py", line 308, in write
+    data = to_bytes(data)
+  File "C:\Users\liguo\AppData\Local\Programs\Python\Python36-32\lib\site-packag
+es\serial\serialutil.py", line 63, in to_bytes
+    raise TypeError('unicode strings are not supported, please encode to bytes:
+{!r}'.format(seq))
+TypeError: unicode strings are not supported, please encode to bytes: '*********
+************************'
+好像这个开发环境下的字符串是Unicode类型，必须转换成字节形式也就是ascll形式的b‘字符串’
+
+在命令行中使用pip install pyserial-3.1.1-py2.py3-none-any.whl 安装串口模块
+然后就可以使用串口了
+WIN7 32 
+串口名字使用“COM1” ，不能使用数字，只能使用空或者字符串
+
+Microsoft Windows [版本 6.1.7601]
+版权所有 (c) 2009 Microsoft Corporation。保留所有权利。
+
+C:\Users\liguo>pip install xlwt
+Requirement already satisfied (use --upgrade to upgrade): xlwt in c:\users\liguo\appdata\local\programs\python\python36-32\lib\site-packages
+
+C:\Users\liguo>
+
+
+excl表格操作库 xlwt xlrd 
+python3.6.0 b1
+在import xlwt的时候出现raise ValueError("cannot use LOCALE flag with a str pattern")的错误，很多个，没有解决办法
+在对应的原文件sre_parse.py 882处pass stone 
+
+python 的print似乎没有占位符。相同的类型参数可以加减不可以乘除，不同类型的参数不可以加减？
+
+
+linux 安装python
+	官网下载源码,
+	./configure
+	make
+	make install
+	
+	将/usr/bin/yum中的python版本改为旧版的,将解压目录下的文件做一个软连接到/usr/bin中,将原有的python改为python x.x
+	如果python的交互中出现退格键和方向键不灵的,安装read-line-dev
+	检查ctype模块是否可用
+from xxx import xxx 
+	如from math import sqrt是把sqrt作为本文件的方法导入进来了，使用的时候只需要直接调用sqrt。
+	而如果import是import math，那么调用的时候要采用math.sqrt的方式。
+	那么如果在自己的文件里定义了相同名字的函数怎么办呢，来实验一下
+	from math import sqrt def sqrt(n):     return n print sqrt(13689) raw_input()运行py文件输出13689，所以自己定义了函数会自动屏蔽掉。
+	所以大量引用import math.*是个比较好的办法，from math import *就容易出错了，当然用到很少的函数且次数较多时上面这种办法会比较合适。	
+
+ctypes 	int的转换ok使用c_int或者c_long,
+	char*的转换ok,使用c_char_p
+	
+	C类型                       Python类型                        ctypes 类型
+	char                        1-character/string                c_char
+	wchar_t                     1-character/Unicode、string       c_wchar
+	char                        int/long                          c_byte
+	char                        int/long                          c_ubyte
+	short                       int/long                          c_short
+	unsigned short              int/long                          c_ushort
+	int                         int/long                          C_int
+	unsigned int                int/long                          c_uint
+	long                        int/long                          c_long
+	unsigned long               int/long                          c_ulong
+	long long                   int/long                          c_longlong
+	unsigned long long          int/long                          c_ulonglong
+	float                       float                             c_float
+	double                      float                             c_double
+	char *(NULL terminated)     string or none                    c_char_p
+	wchar_t *(NULL terminated) unicode or none                   c_wchar_p
+	void *                      int/long or none                  c_void_p
+
+	当一个函数期望一个指针作为参数时,可以像这样调用
+	function_main( byref(parameter) ). //
+
+	struct例子
+	下面的例子是定义一个结构
+	C语言例子
+	    struct beer_recipe
+	    {
+	    int amt_barley;
+	    int amt_water;
+	    };
+	    
+	Python例子
+	class beer_recipe(Structure):
+	    _fields_ = [
+	    ("amt_barley", c_int),
+	    ("amt_water", c_int),
+	    ]
+	    
+	    
+	Union结构例子
+	C语言例子
+	    union {
+	    long barley_long;
+	    int barley_int;
+	    char barley_char[8];
+	    }barley_amount;
+
+	Python例子
+	class barley_amount(Union):
+	    _fields_ = [
+	    ("barley_long", c_long),
+	    ("barley_int", c_int),
+	    ("barley_char", c_char * 8),
+	    ]
+
+	其他的怎么办?结构体(类)怎么传?结构体(类)指针怎么传?
+	循环怎么写?
+
+回文字符串判断
+
+s==s[::-1]
+
+
+文件相关的在IO modules
+ 
+
+
+查询模块接口/类
+import serial
+help(serial)
+	查询模块
+
+help(serial.Serial)
+	查询模块的.Serial 类
+	
+<class str> = str(<class bytes>)
+<class bytes> = <class str>.encode();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

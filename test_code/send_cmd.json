@@ -1,0 +1,20 @@
+{
+    "command": [
+
+        {
+            "sendcmd" : "#\r",
+            "recvcmd" : "~01@ OK\r\n",
+            "wait": 0
+        },
+        {
+            "sendcmd" : "#version?\r",
+            "recvcmd" : "~01@VERSION 01.00.0000\r\n",
+            "wait": 0
+        },
+        {
+            "sendcmd" : "#model?\r",
+            "recvcmd" : "~01@MODEL VS-34FD\r\n",
+            "wait": 0
+        }
+    ]
+}
