@@ -15,15 +15,15 @@ es\serial\serialutil.py", line 63, in to_bytes
 {!r}'.format(seq))
 TypeError: unicode strings are not supported, please encode to bytes: '*********
 ************************'
-ºÃÏñÕâ¸ö¿ª·¢»·¾³ÏÂµÄ×Ö·û´®ÊÇUnicodeÀàĞÍ£¬±ØĞë×ª»»³É×Ö½ÚĞÎÊ½Ò²¾ÍÊÇascllĞÎÊ½µÄb¡®×Ö·û´®¡¯
+å¥½åƒè¿™ä¸ªå¼€å‘ç¯å¢ƒä¸‹çš„å­—ç¬¦ä¸²æ˜¯Unicodeç±»å‹ï¼Œå¿…é¡»è½¬æ¢æˆå­—èŠ‚å½¢å¼ä¹Ÿå°±æ˜¯ascllå½¢å¼çš„bâ€˜å­—ç¬¦ä¸²â€™
 
-ÔÚÃüÁîĞĞÖĞÊ¹ÓÃpip install pyserial-3.1.1-py2.py3-none-any.whl °²×°´®¿ÚÄ£¿é
-È»ºó¾Í¿ÉÒÔÊ¹ÓÃ´®¿ÚÁË
+åœ¨å‘½ä»¤è¡Œä¸­ä½¿ç”¨pip install pyserial-3.1.1-py2.py3-none-any.whl å®‰è£…ä¸²å£æ¨¡å—
+ç„¶åå°±å¯ä»¥ä½¿ç”¨ä¸²å£äº†
 WIN7 32 
-´®¿ÚÃû×ÖÊ¹ÓÃ¡°COM1¡± £¬²»ÄÜÊ¹ÓÃÊı×Ö£¬Ö»ÄÜÊ¹ÓÃ¿Õ»òÕß×Ö·û´®
+ä¸²å£åå­—ä½¿ç”¨â€œCOM1â€ ï¼Œä¸èƒ½ä½¿ç”¨æ•°å­—ï¼Œåªèƒ½ä½¿ç”¨ç©ºæˆ–è€…å­—ç¬¦ä¸²
 
-Microsoft Windows [°æ±¾ 6.1.7601]
-°æÈ¨ËùÓĞ (c) 2009 Microsoft Corporation¡£±£ÁôËùÓĞÈ¨Àû¡£
+Microsoft Windows [ç‰ˆæœ¬ 6.1.7601]
+ç‰ˆæƒæ‰€æœ‰ (c) 2009 Microsoft Corporationã€‚ä¿ç•™æ‰€æœ‰æƒåˆ©ã€‚
 
 C:\Users\liguo>pip install xlwt
 Requirement already satisfied (use --upgrade to upgrade): xlwt in c:\users\liguo\appdata\local\programs\python\python36-32\lib\site-packages
@@ -31,36 +31,36 @@ Requirement already satisfied (use --upgrade to upgrade): xlwt in c:\users\liguo
 C:\Users\liguo>
 
 
-excl±í¸ñ²Ù×÷¿â xlwt xlrd 
+exclè¡¨æ ¼æ“ä½œåº“ xlwt xlrd 
 python3.6.0 b1
-ÔÚimport xlwtµÄÊ±ºò³öÏÖraise ValueError("cannot use LOCALE flag with a str pattern")µÄ´íÎó£¬ºÜ¶à¸ö£¬Ã»ÓĞ½â¾ö°ì·¨
-ÔÚ¶ÔÓ¦µÄÔ­ÎÄ¼şsre_parse.py 882´¦pass stone 
+åœ¨import xlwtçš„æ—¶å€™å‡ºç°raise ValueError("cannot use LOCALE flag with a str pattern")çš„é”™è¯¯ï¼Œå¾ˆå¤šä¸ªï¼Œæ²¡æœ‰è§£å†³åŠæ³•
+åœ¨å¯¹åº”çš„åŸæ–‡ä»¶sre_parse.py 882å¤„pass stone 
 
-python µÄprintËÆºõÃ»ÓĞÕ¼Î»·û¡£ÏàÍ¬µÄÀàĞÍ²ÎÊı¿ÉÒÔ¼Ó¼õ²»¿ÉÒÔ³Ë³ı£¬²»Í¬ÀàĞÍµÄ²ÎÊı²»¿ÉÒÔ¼Ó¼õ£¿
+python çš„printä¼¼ä¹æ²¡æœ‰å ä½ç¬¦ã€‚ç›¸åŒçš„ç±»å‹å‚æ•°å¯ä»¥åŠ å‡ä¸å¯ä»¥ä¹˜é™¤ï¼Œä¸åŒç±»å‹çš„å‚æ•°ä¸å¯ä»¥åŠ å‡ï¼Ÿ
 
 
-linux °²×°python
-	¹ÙÍøÏÂÔØÔ´Âë,
+linux å®‰è£…python
+	å®˜ç½‘ä¸‹è½½æºç ,
 	./configure
 	make
 	make install
 	
-	½«/usr/bin/yumÖĞµÄpython°æ±¾¸ÄÎª¾É°æµÄ,½«½âÑ¹Ä¿Â¼ÏÂµÄÎÄ¼ş×öÒ»¸öÈíÁ¬½Óµ½/usr/binÖĞ,½«Ô­ÓĞµÄpython¸ÄÎªpython x.x
-	Èç¹ûpythonµÄ½»»¥ÖĞ³öÏÖÍË¸ñ¼üºÍ·½Ïò¼ü²»ÁéµÄ,°²×°read-line-dev
-	¼ì²éctypeÄ£¿éÊÇ·ñ¿ÉÓÃ
+	å°†/usr/bin/yumä¸­çš„pythonç‰ˆæœ¬æ”¹ä¸ºæ—§ç‰ˆçš„,å°†è§£å‹ç›®å½•ä¸‹çš„æ–‡ä»¶åšä¸€ä¸ªè½¯è¿æ¥åˆ°/usr/binä¸­,å°†åŸæœ‰çš„pythonæ”¹ä¸ºpython x.x
+	å¦‚æœpythonçš„äº¤äº’ä¸­å‡ºç°é€€æ ¼é”®å’Œæ–¹å‘é”®ä¸çµçš„,å®‰è£…read-line-dev
+	æ£€æŸ¥ctypeæ¨¡å—æ˜¯å¦å¯ç”¨
 from xxx import xxx 
-	Èçfrom math import sqrtÊÇ°Ñsqrt×÷Îª±¾ÎÄ¼şµÄ·½·¨µ¼Èë½øÀ´ÁË£¬Ê¹ÓÃµÄÊ±ºòÖ»ĞèÒªÖ±½Óµ÷ÓÃsqrt¡£
-	¶øÈç¹ûimportÊÇimport math£¬ÄÇÃ´µ÷ÓÃµÄÊ±ºòÒª²ÉÓÃmath.sqrtµÄ·½Ê½¡£
-	ÄÇÃ´Èç¹ûÔÚ×Ô¼ºµÄÎÄ¼şÀï¶¨ÒåÁËÏàÍ¬Ãû×ÖµÄº¯ÊıÔõÃ´°ìÄØ£¬À´ÊµÑéÒ»ÏÂ
-	from math import sqrt def sqrt(n):     return n print sqrt(13689) raw_input()ÔËĞĞpyÎÄ¼şÊä³ö13689£¬ËùÒÔ×Ô¼º¶¨ÒåÁËº¯Êı»á×Ô¶¯ÆÁ±Îµô¡£
-	ËùÒÔ´óÁ¿ÒıÓÃimport math.*ÊÇ¸ö±È½ÏºÃµÄ°ì·¨£¬from math import *¾ÍÈİÒ×³ö´íÁË£¬µ±È»ÓÃµ½ºÜÉÙµÄº¯ÊıÇÒ´ÎÊı½Ï¶àÊ±ÉÏÃæÕâÖÖ°ì·¨»á±È½ÏºÏÊÊ¡£	
+	å¦‚from math import sqrtæ˜¯æŠŠsqrtä½œä¸ºæœ¬æ–‡ä»¶çš„æ–¹æ³•å¯¼å…¥è¿›æ¥äº†ï¼Œä½¿ç”¨çš„æ—¶å€™åªéœ€è¦ç›´æ¥è°ƒç”¨sqrtã€‚
+	è€Œå¦‚æœimportæ˜¯import mathï¼Œé‚£ä¹ˆè°ƒç”¨çš„æ—¶å€™è¦é‡‡ç”¨math.sqrtçš„æ–¹å¼ã€‚
+	é‚£ä¹ˆå¦‚æœåœ¨è‡ªå·±çš„æ–‡ä»¶é‡Œå®šä¹‰äº†ç›¸åŒåå­—çš„å‡½æ•°æ€ä¹ˆåŠå‘¢ï¼Œæ¥å®éªŒä¸€ä¸‹
+	from math import sqrt def sqrt(n):     return n print sqrt(13689) raw_input()è¿è¡Œpyæ–‡ä»¶è¾“å‡º13689ï¼Œæ‰€ä»¥è‡ªå·±å®šä¹‰äº†å‡½æ•°ä¼šè‡ªåŠ¨å±è”½æ‰ã€‚
+	æ‰€ä»¥å¤§é‡å¼•ç”¨import math.*æ˜¯ä¸ªæ¯”è¾ƒå¥½çš„åŠæ³•ï¼Œfrom math import *å°±å®¹æ˜“å‡ºé”™äº†ï¼Œå½“ç„¶ç”¨åˆ°å¾ˆå°‘çš„å‡½æ•°ä¸”æ¬¡æ•°è¾ƒå¤šæ—¶ä¸Šé¢è¿™ç§åŠæ³•ä¼šæ¯”è¾ƒåˆé€‚ã€‚	
 
-ctypes 	intµÄ×ª»»okÊ¹ÓÃc_int»òÕßc_long,
-	char*µÄ×ª»»ok,Ê¹ÓÃc_char_p
+ctypes 	intçš„è½¬æ¢okä½¿ç”¨c_intæˆ–è€…c_long,
+	char*çš„è½¬æ¢ok,ä½¿ç”¨c_char_p
 	
-	CÀàĞÍ                       PythonÀàĞÍ                        ctypes ÀàĞÍ
+	Cç±»å‹                       Pythonç±»å‹                        ctypes ç±»å‹
 	char                        1-character/string                c_char
-	wchar_t                     1-character/Unicode¡¢string       c_wchar
+	wchar_t                     1-character/Unicodeã€string       c_wchar
 	char                        int/long                          c_byte
 	char                        int/long                          c_ubyte
 	short                       int/long                          c_short
@@ -77,19 +77,19 @@ ctypes 	intµÄ×ª»»okÊ¹ÓÃc_int»òÕßc_long,
 	wchar_t *(NULL terminated) unicode or none                   c_wchar_p
 	void *                      int/long or none                  c_void_p
 
-	µ±Ò»¸öº¯ÊıÆÚÍûÒ»¸öÖ¸Õë×÷Îª²ÎÊıÊ±,¿ÉÒÔÏñÕâÑùµ÷ÓÃ
+	å½“ä¸€ä¸ªå‡½æ•°æœŸæœ›ä¸€ä¸ªæŒ‡é’ˆä½œä¸ºå‚æ•°æ—¶,å¯ä»¥åƒè¿™æ ·è°ƒç”¨
 	function_main( byref(parameter) ). //
 
-	structÀı×Ó
-	ÏÂÃæµÄÀı×ÓÊÇ¶¨ÒåÒ»¸ö½á¹¹
-	CÓïÑÔÀı×Ó
+	structä¾‹å­
+	ä¸‹é¢çš„ä¾‹å­æ˜¯å®šä¹‰ä¸€ä¸ªç»“æ„
+	Cè¯­è¨€ä¾‹å­
 	    struct beer_recipe
 	    {
 	    int amt_barley;
 	    int amt_water;
 	    };
 	    
-	PythonÀı×Ó
+	Pythonä¾‹å­
 	class beer_recipe(Structure):
 	    _fields_ = [
 	    ("amt_barley", c_int),
@@ -97,15 +97,15 @@ ctypes 	intµÄ×ª»»okÊ¹ÓÃc_int»òÕßc_long,
 	    ]
 	    
 	    
-	Union½á¹¹Àı×Ó
-	CÓïÑÔÀı×Ó
+	Unionç»“æ„ä¾‹å­
+	Cè¯­è¨€ä¾‹å­
 	    union {
 	    long barley_long;
 	    int barley_int;
 	    char barley_char[8];
 	    }barley_amount;
 
-	PythonÀı×Ó
+	Pythonä¾‹å­
 	class barley_amount(Union):
 	    _fields_ = [
 	    ("barley_long", c_long),
@@ -113,25 +113,25 @@ ctypes 	intµÄ×ª»»okÊ¹ÓÃc_int»òÕßc_long,
 	    ("barley_char", c_char * 8),
 	    ]
 
-	ÆäËûµÄÔõÃ´°ì?½á¹¹Ìå(Àà)ÔõÃ´´«?½á¹¹Ìå(Àà)Ö¸ÕëÔõÃ´´«?
-	Ñ­»·ÔõÃ´Ğ´?
+	å…¶ä»–çš„æ€ä¹ˆåŠ?ç»“æ„ä½“(ç±»)æ€ä¹ˆä¼ ?ç»“æ„ä½“(ç±»)æŒ‡é’ˆæ€ä¹ˆä¼ ?
+	å¾ªç¯æ€ä¹ˆå†™?
 
-»ØÎÄ×Ö·û´®ÅĞ¶Ï
+å›æ–‡å­—ç¬¦ä¸²åˆ¤æ–­
 
 s==s[::-1]
 
 
-ÎÄ¼şÏà¹ØµÄÔÚIO modules
+æ–‡ä»¶ç›¸å…³çš„åœ¨IO modules
  
 
 
-²éÑ¯Ä£¿é½Ó¿Ú/Àà
+æŸ¥è¯¢æ¨¡å—æ¥å£/ç±»
 import serial
 help(serial)
-	²éÑ¯Ä£¿é
+	æŸ¥è¯¢æ¨¡å—
 
 help(serial.Serial)
-	²éÑ¯Ä£¿éµÄ.Serial Àà
+	æŸ¥è¯¢æ¨¡å—çš„.Serial ç±»
 	
 <class str> = str(<class bytes>)
 <class bytes> = <class str>.encode();
