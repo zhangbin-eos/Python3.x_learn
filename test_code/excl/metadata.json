@@ -1,0 +1,3889 @@
+{
+  "_general": {
+    "openUntilLevel": 1,
+    "version": "1.17"
+  },
+  "filename": {
+    "title": "File name"
+  },
+  "fileversion": {
+    "title": "File version"
+  },
+  "force-setting": {
+    "hide": 1
+  },
+  "data": {
+    "hideTitle": 1
+  },
+  "data.matrix.name": {
+    "enabled": 1,
+    "p3k": "#NAME [name]",
+    "regexpr": "^[a-zA-Z\\d][a-zA-Z\\d-_]{0,13}[a-zA-Z\\d]$|^[a-zA-Z\\d]$"
+  },
+  "data.communication.Ethernet.#": {
+    "title": "Ethernet #[#]"
+  },
+  "data.communication.Ethernet.#.ifname": {
+    "type": "string"
+  },
+  "data.communication.Ethernet.#.mac": {
+    "type": "string"
+  },
+  "data.communication.Ethernet.#.ip": {
+    "type": "ip",
+    "enabled": 1,
+    "p3k": "#NET-CONFIG 0,[ip],[mask],[gate]",
+    "priority": 999
+  },
+  "data.communication.Ethernet.#.mask": {
+    "type": "ip",
+    "enabled": 1,
+    "p3k": "#NET-CONFIG 0,[ip],[mask],[gate]",
+    "priority": 999
+  },
+  "data.communication.Ethernet.#.gate": {
+    "type": "ip",
+    "enabled": 1,
+    "p3k": "#NET-CONFIG 0,[ip],[mask],[gate]",
+    "priority": 999
+  },
+  "data.communication.Ethernet.#.dhcp": {
+    "type": "boolean",
+    "title": "DHCP",
+    "enabled": 1,
+    "p3k": "#NET-DHCP [dhcp]"
+  },
+  "data.communication.Ethernet.#.tcp": {
+    "title": "TCP",
+    "enabled": 1,
+    "min": 1025,
+    "max": 65535,
+    "p3k": "#ETH-PORT TCP, [tcp]"
+  },
+  "data.communication.Ethernet.#.udp": {
+    "title": "UDP",
+    "enabled": 1,
+    "min": 1025,
+    "max": 65535,
+    "p3k": "#ETH-PORT UDP, [udp]"
+  },
+  "data.communication.serial.#": {
+    "title": "Serial #[#]"
+  },
+  "data.communication.serial.#.ifname": {
+    "type": "string"
+  },
+  "data.communication.serial.#.type": {
+    "type": "string"
+  },
+  "data.communication.serial.#.speed": {
+    "type": "list",
+    "title": "Baud",
+    "enabled": 1,
+    "list": [
+      9600,
+      19200,
+      38400,
+      57600,
+      115200
+    ],
+    "p3k": "#BAUD [speed]"
+  },
+  "data.communication.serial.#.databits": {
+    "title": "Data Size"
+  },
+  "data.communication.serial.#.stopbits": {
+    "title": "Stop Bits"
+  },
+  "data.communication.serial.#.parity": {
+    "type": "number"
+  },
+  "data.switch.routing.#": {
+    "title": "Switch Routing #[#]"
+  },
+  "data.switch.routing.#.type": {
+    "type": "list",
+    "title": "Matrix Type",
+    "list": [
+      {
+        "value": "v",
+        "label": "Video Matrix"
+      },
+      {
+        "value": "a",
+        "label": "Audio Matrix"
+      },
+      {
+        "value": "av",
+        "lable": "Video and Audio Matrix"
+      }
+    ]
+  },
+  "data.switch.routing.#.out": {
+    "title": "Output Port"
+  },
+  "data.switch.routing.#.in": {
+    "title": "Input Port",
+    "enabled": 1,
+    "min": 0,
+    "max": 17,
+    "p3k": "#VID [in]>[out]"
+  },
+  "data.switch.presets.#": {
+    "title": "Preset #[#]"
+  },
+  "data.switch.presets.#.id": {
+    "min": 1,
+    "max": 60,
+    "p3k": "#PRST-RCL [id]"
+  },
+  "data.switch.presets.#.value.#": {
+    "title": "Preset Routing #[#]"
+  },
+  "data.switch.presets.#.value.#.type": {
+    "type": "list",
+    "title": "Matrix Type",
+    "list": [
+      {
+        "value": "v",
+        "label": "Video Matrix"
+      },
+      {
+        "value": "a",
+        "label": "Audio Matrix"
+      },
+      {
+        "value": "av",
+        "lable": "Video and Audio Matrix"
+      }
+    ]
+  },
+  "data.switch.presets.#.value.#.out": {
+    "title": "Output Port"
+  },
+  "data.switch.presets.#.value.#.in": {
+    "title": "Input Port",
+    "enabled": 1,
+    "min": -1,
+    "max": 17
+  },
+  "data.card.#": {
+    "title": "Card #[#]"
+  },
+  "data.card.#.slot": {
+    "title": "ID"
+  },
+  "data.card.#.type": {
+    "title": "Module ID"
+  },
+  "data.card.#.name": {
+    "title": "NAME"
+  },
+  "data.card.#.portnumber": {
+    "type": "number"
+  },
+  "data.card.#.dlink": {
+    "type": "list",
+    "title": "Link Mode",
+    "list": [
+      {
+        "value": 0,
+        "label": "Normal"
+      },
+      {
+        "value": 1,
+        "label": "DLink"
+      }
+    ]
+  },
+  "data.card.#.fw_info": {
+    "title": "Firmware info"
+  },
+  "data.card.#.fw_info.#": {
+    "title": "Firmware info #[#]"
+  },
+  "data.card.#.fw_info.#.type": {
+    "type": "string"
+  },
+  "data.card.#.fw_info.#.version": {
+    "type": "string"
+  },
+  "data.card.#.Ethernet.#": {
+    "title": "Card Ethernet #[#]"
+  },
+  "data.card.#.Ethernet.#.ifname": {
+    "type": "string"
+  },
+  "data.card.#.Ethernet.#.mac": {
+    "enabled": 1
+  },
+  "data.card.#.Ethernet.#.ip": {
+    "enabled": 1
+  },
+  "data.card.#.Ethernet.#.mask": {
+    "enabled": 1
+  },
+  "data.card.#.Ethernet.#.gate": {
+    "enabled": 1
+  },
+  "data.card.#.Ethernet.#.tcp": {
+    "title": "TCP",
+    "enabled": 1,
+    "min": 1025,
+    "max": 65535
+  },
+  "data.card.#.Ethernet.#.udp": {
+    "title": "UDP",
+    "enabled": 1,
+    "min": 1025,
+    "max": 65535
+  },
+  "data.port.in": {
+    "title": "Inputs"
+  },
+  "data.port.in.#": {
+    "title": "Input #[#]"
+  },
+  "data.port.in.#.dir": {
+    "title": "Direction"
+  },
+  "data.port.in.#.type": {
+    "type": "list",
+    "title": "Matrix Type",
+    "list": [
+      {
+        "value": "v",
+        "label": "Video Matrix"
+      },
+      {
+        "value": "a",
+        "label": "Audio Matrix"
+      },
+      {
+        "value": "av",
+        "lable": "Video and Audio Matrix"
+      }
+    ]
+  },
+  "data.port.in.#.EDID": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.EDID.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.EDID.value": {
+    "title": "EDID"
+  },
+  "data.port.in.#.ResolutionDetect": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.ResolutionDetect.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.ResolutionDetect.value": {
+    "type": "list",
+    "title": "Resolution detect",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Auto"
+      },
+      {
+        "value": 1,
+        "label": "User Define"
+      },
+      {
+        "value": 2,
+        "label": "Auto Adjust"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.PhaseMode": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.PhaseMode.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.PhaseMode.value": {
+    "type": "list",
+    "title": "Phase mode",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Auto"
+      },
+      {
+        "value": 1,
+        "label": "User Define"
+      },
+      {
+        "value": 2,
+        "label": "Auto Adjust"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.Gain": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.Gain.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.Gain.value": {
+    "type": "list",
+    "title": "Gain",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Auto"
+      },
+      {
+        "value": 1,
+        "label": "Custom"
+      }
+    ]
+  },
+  "data.port.in.#.Equalization": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.Equalization.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.Equalization.value": {
+    "type": "list",
+    "title": "Equalization",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Auto"
+      },
+      {
+        "value": 1,
+        "label": "Custom"
+      }
+    ]
+  },
+  "data.port.in.#.Emphasis": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.Emphasis.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.Emphasis.value": {
+    "type": "list",
+    "title": "Emphasis",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Auto"
+      },
+      {
+        "value": 1,
+        "label": "Custom"
+      }
+    ]
+  },
+  "data.port.in.#.PCDVD": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.PCDVD.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.PCDVD.value": {
+    "type": "list",
+    "title": "PC/DVD Mode ",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "DVD Mode"
+      },
+      {
+        "value": 1,
+        "label": "PC Mode"
+      }
+    ]
+  },
+  "data.port.in.#.VideoCompensation": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.VideoCompensation.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.VideoCompensation.value": {
+    "type": "list",
+    "title": "Motion Compensation Methods",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Custom"
+      },
+      {
+        "value": 1,
+        "label": "Static"
+      },
+      {
+        "value": 2,
+        "label": "Dynamic"
+      }
+    ]
+  },
+  "data.port.in.#.HDCP": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.HDCP.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.HDCP.value": {
+    "type": "list",
+    "title": "HDCP Setting (only for output port)",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Follow Sink"
+      },
+      {
+        "value": 1,
+        "label": "HDCP OFF"
+      },
+      {
+        "value": 2,
+        "label": "HDCP ON"
+      }
+    ]
+  },
+  "data.port.in.#.HDMI": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.HDMI.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.HDMI.value": {
+    "type": "list",
+    "title": "HDMI/DVI OUT Select",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Auto"
+      },
+      {
+        "value": 1,
+        "label": "HDMI"
+      },
+      {
+        "value": 2,
+        "label": "DVI"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.ColorSpace": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.ColorSpace.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.ColorSpace.value": {
+    "type": "list",
+    "title": "Color Space",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Auto"
+      },
+      {
+        "value": 1,
+        "label": "RGB444"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.ColorSpace_1": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.ColorSpace_1.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.ColorSpace_1.value": {
+    "type": "list",
+    "title": "Color Space",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 1,
+        "label": "RGB444"
+      },
+      {
+        "value": 2,
+        "label": "YUV422"
+      },
+      {
+        "value": 3,
+        "label": "YUV444"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.DeepColor": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.DeepColor.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.DeepColor.value": {
+    "type": "list",
+    "title": "Deep Color",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Auto"
+      },
+      {
+        "value": 1,
+        "label": "24bpp"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.Pattern": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.Pattern.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.Pattern.value": {
+    "type": "list",
+    "title": "Pattern",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Pattern 1"
+      },
+      {
+        "value": 1,
+        "label": "Pattern 2"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.OUTMODE": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.OUTMODE.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.OUTMODE.value": {
+    "type": "list",
+    "title": "OUT Mode",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Auto"
+      },
+      {
+        "value": 1,
+        "label": "Follow Signal"
+      },
+      {
+        "value": 2,
+        "label": "Folow Sink"
+      }
+    ]
+  },
+  "data.port.in.#.Brightness": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.Brightness.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.Brightness.value": {
+    "title": "Brightness",
+    "enabled": 1,
+    "min": 0,
+    "max": 63,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.Contrast": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.Contrast.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.Contrast.value": {
+    "title": "Contrast",
+    "enabled": 1,
+    "min": 0,
+    "max": 63,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.Hue": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.Hue.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.Hue.value": {
+    "title": "Hue",
+    "enabled": 1,
+    "min": 0,
+    "max": 63
+  },
+  "data.port.in.#.Color": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.Color.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.Color.value": {
+    "title": "Color",
+    "enabled": 1,
+    "min": 0,
+    "max": 63
+  },
+  "data.port.in.#.Sharpness": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.Sharpness.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.Sharpness.value": {
+    "title": "Sharpness",
+    "enabled": 1,
+    "min": 0,
+    "max": 63
+  },
+  "data.port.in.#.ColorTemperature": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.ColorTemperature.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.ColorTemperature.value": {
+    "title": "CCT (Color Temperature)",
+    "enabled": 1,
+    "min": 0,
+    "max": 63
+  },
+  "data.port.in.#.MotionContrast": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.MotionContrast.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.MotionContrast.value": {
+    "title": "Motion Contrast",
+    "enabled": 1,
+    "min": 0,
+    "max": 63
+  },
+  "data.port.in.#.GAMMA": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.GAMMA.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.GAMMA.value": {
+    "title": "GAMMA",
+    "enabled": 1,
+    "min": 0,
+    "max": 63
+  },
+  "data.port.in.#.VideoFilter": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.VideoFilter.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.VideoFilter.value": {
+    "title": "Video Filter",
+    "enabled": 1,
+    "min": 0,
+    "max": 15
+  },
+  "data.port.in.#.Ydelay": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.YDelay.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.YDelay.value": {
+    "title": "Y-Delay",
+    "enabled": 1,
+    "min": 0,
+    "max": 7
+  },
+  "data.port.in.#.PhaseAdjustment": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.PhaseAdjustment.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.PhaseAdjustment.value": {
+    "title": "Phase Adjustment",
+    "enabled": 1,
+    "min": 0,
+    "max": 63,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.GainAdjustment": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.GainAdjustment.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.GainAdjustment.value": {
+    "title": "Gain Adjustment",
+    "enabled": 1,
+    "min": 0,
+    "max": 128
+  },
+  "data.port.in.#.EqualizationAdjustment": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.EqualizationAdjustment.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.EqualizationAdjustment.value": {
+    "title": "Equalization Adjustment",
+    "enabled": 1,
+    "min": 0,
+    "max": 63
+  },
+  "data.port.in.#.EmphasisAdjustment": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.EmphasisAdjustment.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.EmphasisAdjustment.value": {
+    "title": "Emphasis Adjustment",
+    "enabled": 1,
+    "min": 0,
+    "max": 63
+  },
+  "data.port.in.#.CompensationAdjustment": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.CompensationAdjustment.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.CompensationAdjustment.value": {
+    "title": "Compensation Adjustment",
+    "enabled": 1,
+    "min": 0,
+    "max": 32
+  },
+  "data.port.in.#.FanStatus": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.FanStatus.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.FanStatus.value": {
+    "type": "list",
+    "title": "Fan status",
+    "list": [
+      {
+        "value": 0,
+        "label": "Normal"
+      },
+      {
+        "value": 1,
+        "label": "ERROR"
+      }
+    ]
+  },
+  "data.port.in.#.Reset": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.Reset.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.Reset.value": {
+    "type": "list",
+    "title": "Reset",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "": "Restart"
+      },
+      {
+        "value": 1,
+        "label": "Re-Power"
+      },
+      {
+        "value": 2,
+        "label": "Factory"
+      }
+    ],
+    "min": 0,
+    "max": 0,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.VideoFreeze": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.VideoFreeze.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.VideoFreeze.value": {
+    "type": "boolean",
+    "title": "Video freeze",
+    "enabled": 1,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.TVFormat": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.TVFormat.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.TVFormat.value": {
+    "type": "list",
+    "title": "TV Format",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Auto"
+      },
+      {
+        "value": 1,
+        "label": "PAL"
+      },
+      {
+        "value": 2,
+        "label": "NTSC"
+      },
+      {
+        "value": 3,
+        "label": "SECAM"
+      }
+    ]
+  },
+  "data.port.in.#.InputHorPosition": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.InputHorPosition.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.InputHorPosition.value": {
+    "title": "Input Hor-Position",
+    "enabled": 1,
+    "min": 0,
+    "max": 16383
+  },
+  "data.port.in.#.InputVerPosition": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.InputVerPosition.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.InputVerPosition.value": {
+    "title": "Input Ver-Position",
+    "enabled": 1,
+    "min": 0,
+    "max": 16383
+  },
+  "data.port.in.#.InputHorSize": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.InputHorSize.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.InputHorSize.value": {
+    "title": "Input Hor-Size",
+    "enabled": 1,
+    "min": 0,
+    "max": 16383
+  },
+  "data.port.in.#.InputVerSize": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.InputVerSize.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.InputVerSize.value": {
+    "title": "Input Ver-Size",
+    "enabled": 1,
+    "min": 0,
+    "max": 16383
+  },
+  "data.port.in.#.OutputHorPosition": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.OutputHorPosition.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.OutputHorPosition.value": {
+    "title": "Output Hor-Position",
+    "enabled": 1,
+    "min": 0,
+    "max": 16383
+  },
+  "data.port.in.#.OutputVerPosition": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.OutputVerPosition.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.OutputVerPosition.value": {
+    "title": "Output Ver-Position",
+    "enabled": 1,
+    "min": 0,
+    "max": 16383
+  },
+  "data.port.in.#.OutputHorSize": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.OutputHorSize.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.OutputHorSize.value": {
+    "title": "Output Hor-Size",
+    "enabled": 1,
+    "min": 0,
+    "max": 16383
+  },
+  "data.port.in.#.OutputVerSize": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.OutputVerSize.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.OutputVerSize.value": {
+    "title": "Output Ver-Size",
+    "enabled": 1,
+    "min": 0,
+    "max": 16383
+  },
+  "data.port.in.#.ZoomBHorPosition": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.ZoomBHorPosition.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.ZoomBHorPosition.value": {
+    "title": "Background Hor-Position (PIP Mode)",
+    "enabled": 1,
+    "min": 0,
+    "max": 16383
+  },
+  "data.port.in.#.ZoomBVerPosition": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.ZoomBVerPosition.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.ZoomBVerPosition.value": {
+    "title": "Background Ver-Position (PIP Mode)",
+    "enabled": 1,
+    "min": 0,
+    "max": 16383
+  },
+  "data.port.in.#.ZoomBHorSize": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.ZoomBHorSize.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.ZoomBHorSize.value": {
+    "title": "Background Hor-Size (PIP Mode)",
+    "enabled": 1,
+    "min": 0,
+    "max": 16383
+  },
+  "data.port.in.#.ZoomBVerSize": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.ZoomBVerSize.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.ZoomBVerSize.value": {
+    "title": "Background Ver-Size (PIP Mode)",
+    "enabled": 1,
+    "min": 0,
+    "max": 16383
+  },
+  "data.port.in.#.ZoomWHorPosition": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.ZoomWHorPosition.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.ZoomWHorPosition.value": {
+    "title": "Windows Hor-Position (PIP Mode)",
+    "enabled": 1,
+    "min": 0,
+    "max": 16383
+  },
+  "data.port.in.#.ZoomWVerPosition": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.ZoomWVerPosition.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.ZoomWVerPosition.value": {
+    "title": "Windows Ver-Position (PIP Mode)",
+    "enabled": 1,
+    "min": 0,
+    "max": 16383
+  },
+  "data.port.in.#.ZoomWHorSize": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.ZoomWHorSize.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.ZoomWHorSize.value": {
+    "title": "Windows Hor-Size (PIP Mode)",
+    "enabled": 1,
+    "min": 0,
+    "max": 16383
+  },
+  "data.port.in.#.ZoomWVerSize": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.ZoomWVerSize.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.ZoomWVerSize.value": {
+    "title": "Windows Ver-Size (PIP Mode)",
+    "enabled": 1,
+    "min": 0,
+    "max": 16383
+  },
+  "data.port.in.#.HorTotalPixels": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.HorTotalPixels.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.HorTotalPixels.value": {
+    "title": "Hor-Total Pixels",
+    "enabled": 1,
+    "min": 1,
+    "max": 7000,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.VerTotalPixels": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.VerTotalPixels.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.VerTotalPixels.value": {
+    "title": "Ver-Total Pixels",
+    "enabled": 1,
+    "min": 0,
+    "max": 16383,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.MaxInputPixelClk": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.MaxInputPixelClk.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.MaxInputPixelClk.value": {
+    "title": "Max Input Pixel Clock",
+    "enabled": 1,
+    "min": 0,
+    "max": 16383,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.HorizontalStart": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.HorizontalStart.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.HorizontalStart.value": {
+    "title": "Horizontal Start",
+    "enabled": 1,
+    "min": 1,
+    "max": 600,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.HorizontalActive": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.HorizontalActive.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.HorizontalActive.value": {
+    "title": "Horizontal Active",
+    "enabled": 1,
+    "min": 1,
+    "max": 4000,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.VerticalStart": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.VerticalStart.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.VerticalStart.value": {
+    "title": "Vertical Start",
+    "enabled": 1,
+    "min": 1,
+    "max": 255,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.VerticalActive": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.VerticalActive.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.VerticalActive.value": {
+    "title": "Vertical Active",
+    "enabled": 1,
+    "min": 1,
+    "max": 3000,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.DBChannels": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.DBChannels.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.DBChannels.value": {
+    "type": "list",
+    "title": "DB Channels Number",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Auto"
+      },
+      {
+        "value": 1,
+        "label": "1 Channels"
+      },
+      {
+        "value": 2,
+        "label": "2 Channels"
+      },
+      {
+        "value": 3,
+        "label": "4 Channels"
+      },
+      {
+        "value": 4,
+        "label": "8 Channels"
+      }
+    ]
+  },
+  "data.port.in.#.DPCP": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.DPCP.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.DPCP.value": {
+    "title": "DPCP",
+    "enabled": 1,
+    "min": 0,
+    "max": 128
+  },
+  "data.port.in.#.RestoreSetup": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.RestoreSetup.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.RestoreSetup.value": {
+    "title": "Save Timing",
+    "min": 0,
+    "max": 31,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.RecallSetup": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.RecallSetup.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.RecallSetup.value": {
+    "title": "Recall Timing",
+    "min": 0,
+    "max": 31,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.SwitchSpeed": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.SwitchSpeed.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.SwitchSpeed.value": {
+    "type": "list",
+    "title": "Switch Speed",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Normal"
+      },
+      {
+        "value": 1,
+        "label": "Fast"
+      },
+      {
+        "value": 2,
+        "label": "EX-Fast"
+      },
+      {
+        "value": 3,
+        "label": "Seamless"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.SwitchSpeed_1": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.SwitchSpeed_1.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.SwitchSpeed_1.value": {
+    "type": "list",
+    "title": "Switch Speed",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Normal"
+      },
+      {
+        "value": 1,
+        "label": "Fast"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.SwitchSpeed_2": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.SwitchSpeed_2.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.SwitchSpeed_2.value": {
+    "type": "list",
+    "title": "Switch Speed",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Normal"
+      },
+      {
+        "value": 1,
+        "label": "Fast"
+      },
+      {
+        "value": 2,
+        "label": "EX-Fast"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.SwitchSpeed_3": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.SwitchSpeed_3.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.SwitchSpeed_3.value": {
+    "type": "list",
+    "title": "Switch Speed",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Normal"
+      },
+      {
+        "value": 1,
+        "label": "Fast"
+      },
+      {
+        "value": 3,
+        "label": "Seamless"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.Volume": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.Volume.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.Volume.value": {
+    "title": "Volume ",
+    "enabled": 1,
+    "min": 0,
+    "max": 70,
+    "p3k": "#AUD-LVL {'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.BackgroundVolume": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.BackgroundVolume.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.BackgroundVolume.value": {
+    "title": "Background Volume",
+    "enabled": 1,
+    "min": 0,
+    "max": 100
+  },
+  "data.port.in.#.MICVolume": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.MICVolume.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.MICVolume.value": {
+    "title": "MIC Volume",
+    "enabled": 1,
+    "min": 0,
+    "max": 100
+  },
+  "data.port.in.#.AudioBalance": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.AudioBalance.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.AudioBalance.value": {
+    "title": "Balance",
+    "enabled": 1,
+    "min": 0,
+    "max": 100,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.BackgroundBalance": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.BackgroundBalance.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.BackgroundBalance.value": {
+    "title": "Background Balance",
+    "enabled": 1,
+    "min": 0,
+    "max": 100
+  },
+  "data.port.in.#.MICBalance": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.MICBalance.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.MICBalance.value": {
+    "title": "MIC Balance",
+    "enabled": 1,
+    "min": 0,
+    "max": 100
+  },
+  "data.port.in.#.AudioBass": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.AudioBass.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.AudioBass.value": {
+    "title": "Bass",
+    "enabled": 1,
+    "min": 0,
+    "max": 15,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.AudioTreble": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.AudioTreble.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.AudioTreble.value": {
+    "title": "Treble",
+    "enabled": 1,
+    "min": 0,
+    "max": 15,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.AudioSampleFreq": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.AudioSampleFreq.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.AudioSampleFreq.value": {
+    "type": "list",
+    "title": "Audio Sample Frequency",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Auto"
+      },
+      {
+        "value": 1,
+        "label": "44.1K"
+      },
+      {
+        "value": 2,
+        "label": "48K"
+      },
+      {
+        "value": 3,
+        "label": "88.2K"
+      },
+      {
+        "value": 4,
+        "label": "96K"
+      },
+      {
+        "value": 5,
+        "label": "176.4K"
+      },
+      {
+        "value": 6,
+        "label": "192K"
+      }
+    ]
+  },
+  "data.port.in.#.AudioSampleSize": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.AudioSampleSize.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.AudioSampleSize.value": {
+    "type": "list",
+    "title": "Audio Sample Size",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Auto"
+      },
+      {
+        "value": 1,
+        "label": "16Bits"
+      },
+      {
+        "value": 2,
+        "label": "20Bits"
+      },
+      {
+        "value": 3,
+        "label": "24Bits"
+      }
+    ]
+  },
+  "data.port.in.#.AudioMute": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.AudioMute.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.AudioMute.value": {
+    "type": "list",
+    "title": "Mute",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Mute"
+      },
+      {
+        "value": 1,
+        "label": "Non-Mute"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.AudioLoudness": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.AudioLoudness.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.AudioLoudness.value": {
+    "type": "boolean",
+    "title": "Loudness",
+    "enabled": 1
+  },
+  "data.port.in.#.AudioMixMode": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.AudioMixMode.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.AudioMixMode.value": {
+    "type": "boolean",
+    "title": "Mono",
+    "enabled": 1,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.AudioStereoMode": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.AudioStereoMode.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.AudioStereoMode.value": {
+    "type": "boolean",
+    "title": "Stereo Mode",
+    "enabled": 1
+  },
+  "data.port.in.#.AudioTalkOver": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.AudioTalkOver.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.AudioTalkOver.value": {
+    "type": "boolean",
+    "title": "Talk-Over Mode",
+    "enabled": 1
+  },
+  "data.port.in.#.AudioAuxDelay": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.AudioAuxDelay.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.AudioAuxDelay.value": {
+    "title": "Aux-Delay",
+    "enabled": 1,
+    "min": 0,
+    "max": 15
+  },
+  "data.port.in.#.AudioSelect": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.AudioSelect.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.AudioSelect.value": {
+    "type": "list",
+    "title": "Audio Select",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Auto"
+      },
+      {
+        "value": 1,
+        "label": "HDMI"
+      },
+      {
+        "value": 2,
+        "label": "Digital Audio"
+      },
+      {
+        "value": 3,
+        "label": "Analog Audio"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.AudioSelect_1": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.AudioSelect_1.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.AudioSelect_1.value": {
+    "type": "list",
+    "title": "Audio Select",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Auto"
+      },
+      {
+        "value": 1,
+        "label": "HDMI"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.AudioSelect_2": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.AudioSelect_2.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.AudioSelect_2.value": {
+    "type": "list",
+    "title": "Audio Select",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Auto"
+      },
+      {
+        "value": 1,
+        "label": "HDMI"
+      },
+      {
+        "value": 2,
+        "label": "Digital Audio"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.AudioSelect_3": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.AudioSelect_3.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.AudioSelect_3.value": {
+    "type": "list",
+    "title": "Audio Select",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Auto"
+      },
+      {
+        "value": 1,
+        "label": "HDMI"
+      },
+      {
+        "value": 3,
+        "label": "Analog Audio"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.AudioSelect_4": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.AudioSelect_4.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.AudioSelect_4.value": {
+    "type": "list",
+    "title": "Audio Select",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 1,
+        "label": "HDMI"
+      },
+      {
+        "value": 3,
+        "label": "Analog Audio"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.AudioSelect_5": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.AudioSelect_5.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.AudioSelect_5.value": {
+    "type": "list",
+    "title": "Audio Select",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Auto"
+      },
+      {
+        "value": 2,
+        "label": "Digital Audio"
+      },
+      {
+        "value": 3,
+        "label": "Analog Audio"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.Temperature": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.Temperature.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.Temperature.value": {
+    "title": "Temperature"
+  },
+  "data.port.in.#.Voltage": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.Voltage.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.Voltage.value": {
+    "title": "Voltage"
+  },
+  "data.port.in.#.R-offset": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.R-offset.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.R-offset.value": {
+    "title": "VGA R-Offset",
+    "enabled": 1,
+    "min": 0,
+    "max": 63,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.G-offset": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.G-offset.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.G-offset.value": {
+    "title": "VGA G-Offset",
+    "enabled": 1,
+    "min": 0,
+    "max": 63,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.B-offset": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.B-offset.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.B-offset.value": {
+    "title": "VGA B-Offset",
+    "enabled": 1,
+    "min": 0,
+    "max": 63,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.R-gain": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.R-gain.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.R-gain.value": {
+    "title": "VGA R-Gain",
+    "enabled": 1,
+    "min": 0,
+    "max": 63,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.G-gain": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.G-gain.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.G-gain.value": {
+    "title": "VGA G-Gain",
+    "enabled": 1,
+    "min": 0,
+    "max": 63,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.B-gain": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.B-gain.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.B-gain.value": {
+    "title": "VGA B-Gain",
+    "enabled": 1,
+    "min": 0,
+    "max": 63,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.XTRA_0=ON_1=OFF": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.XTRA_0=ON_1=OFF.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.XTRA_0=ON_1=OFF.value": {
+    "type": "list",
+    "title": "XTRA",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "ON"
+      },
+      {
+        "value": 1,
+        "label": "OFF"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.XTRA_0Y_1N_2AUTO": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.XTRA_0Y_1N_2AUTO.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.XTRA_0Y_1N_2AUTO.value": {
+    "type": "list",
+    "title": "XTRA",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "ON"
+      },
+      {
+        "value": 1,
+        "label": "OFF"
+      },
+      {
+        "value": 2,
+        "label": "Auto"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.ST_0IN_1OUT": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.ST_0IN_1OUT.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.ST_0IN_1OUT.value": {
+    "type": "list",
+    "title": "Analog Audio Port (3.5 Port) Setting",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "IN"
+      },
+      {
+        "value": 1,
+        "label": "OUT"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.ST_0IN_1OUT_2ARC": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.ST_0IN_1OUT_2ARC.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.ST_0IN_1OUT_2ARC.value": {
+    "type": "list",
+    "title": "Analog Audio Port (3.5 Port) Setting",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "IN"
+      },
+      {
+        "value": 1,
+        "label": "OUT"
+      },
+      {
+        "value": 2,
+        "label": "ARC"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.HDCP_0=EN_1=DIS": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.HDCP_0=EN_1=DIS.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.HDCP_0=EN_1=DIS.value": {
+    "type": "list",
+    "title": "HDCP",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "HDCP ON"
+      },
+      {
+        "value": 1,
+        "label": "HDCP OFF"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.OUT_HSYNC_INVERT": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.OUT_HSYNC_INVERT.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.OUT_HSYNC_INVERT.value": {
+    "title": "VGA Out HSYNC invert",
+    "enabled": 1,
+    "min": 0,
+    "max": 1,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.OUT_VSYNC_INVERT": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.OUT_VSYNC_INVERT.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.OUT_VSYNC_INVERT.value": {
+    "title": "VGA Out VSYNC invert",
+    "enabled": 1,
+    "min": 0,
+    "max": 1,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.in.#.SDI_AUDIO_SWITCH": {
+    "hideTitle": 1
+  },
+  "data.port.in.#.SDI_AUDIO_SWITCH.sid": {
+    "hide": 1
+  },
+  "data.port.in.#.SDI_AUDIO_SWITCH.value": {
+    "title": "SDI Audio Select",
+    "enabled": 1,
+    "min": 0,
+    "max": 15,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out": {
+    "title": "Outputs"
+  },
+  "data.port.out.#": {
+    "title": "Output #[#]"
+  },
+  "data.port.out.#.dir": {
+    "title": "Direction"
+  },
+  "data.port.out.#.type": {
+    "type": "list",
+    "title": "Matrix Type",
+    "list": [
+      {
+        "value": "v",
+        "label": "Video Matrix"
+      },
+      {
+        "value": "a",
+        "label": "Audio Matrix"
+      },
+      {
+        "value": "av",
+        "lable": "Video and Audio Matrix"
+      }
+    ]
+  },
+  "data.port.out.#.EDID": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.EDID.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.EDID.value": {
+    "title": "EDID",
+    "enabled": 1,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.ResolutionDetect": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.ResolutionDetect.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.ResolutionDetect.value": {
+    "type": "list",
+    "title": "Resolution detect",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Auto"
+      },
+      {
+        "value": 1,
+        "label": "User Define"
+      },
+      {
+        "value": 2,
+        "label": "Auto Adjust"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.PhaseMode": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.PhaseMode.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.PhaseMode.value": {
+    "type": "list",
+    "title": "Phase mode",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Auto"
+      },
+      {
+        "value": 1,
+        "label": "User Define"
+      },
+      {
+        "value": 2,
+        "label": "Auto Adjust"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.Gain": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.Gain.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.Gain.value": {
+    "type": "list",
+    "title": "Gain",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Auto"
+      },
+      {
+        "value": 1,
+        "label": "Custom"
+      }
+    ]
+  },
+  "data.port.out.#.Equalization": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.Equalization.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.Equalization.value": {
+    "type": "list",
+    "title": "Equalization",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Auto"
+      },
+      {
+        "value": 1,
+        "label": "Custom"
+      }
+    ]
+  },
+  "data.port.out.#.Emphasis": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.Emphasis.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.Emphasis.value": {
+    "type": "list",
+    "title": "Emphasis",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Auto"
+      },
+      {
+        "value": 1,
+        "label": "Custom"
+      }
+    ]
+  },
+  "data.port.out.#.PCDVD": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.PCDVD.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.PCDVD.value": {
+    "type": "list",
+    "title": "PC/DVD Mode ",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "DVD Mode"
+      },
+      {
+        "value": 1,
+        "label": "PC Mode"
+      }
+    ]
+  },
+  "data.port.out.#.VideoCompensation": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.VideoCompensation.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.VideoCompensation.value": {
+    "type": "list",
+    "title": "Motion Compensation Methods",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Custom"
+      },
+      {
+        "value": 1,
+        "label": "Static"
+      },
+      {
+        "value": 2,
+        "label": "Dynamic"
+      }
+    ]
+  },
+  "data.port.out.#.HDCP": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.HDCP.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.HDCP.value": {
+    "type": "list",
+    "title": "HDCP Setting (only for output port)",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Follow Sink"
+      },
+      {
+        "value": 1,
+        "label": "HDCP OFF"
+      },
+      {
+        "value": 2,
+        "label": "HDCP ON"
+      }
+    ]
+  },
+  "data.port.out.#.HDMI": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.HDMI.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.HDMI.value": {
+    "type": "list",
+    "title": "HDMI/DVI OUT Select",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Auto"
+      },
+      {
+        "value": 1,
+        "label": "HDMI"
+      },
+      {
+        "value": 2,
+        "label": "DVI"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.ColorSpace": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.ColorSpace.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.ColorSpace.value": {
+    "type": "list",
+    "title": "Color Space",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Auto"
+      },
+      {
+        "value": 1,
+        "label": "RGB444"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.DeepColor": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.ColorSpace_1": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.ColorSpace_1.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.ColorSpace_1.value": {
+    "type": "list",
+    "title": "Color Space",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 1,
+        "label": "RGB444"
+      },
+      {
+        "value": 2,
+        "label": "YUV422"
+      },
+      {
+        "value": 3,
+        "label": "YUV444"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.DeepColor.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.DeepColor.value": {
+    "type": "list",
+    "title": "Deep Color",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Auto"
+      },
+      {
+        "value": 1,
+        "label": "24bpp"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.Pattern": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.Pattern.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.Pattern.value": {
+    "type": "list",
+    "title": "Pattern",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Pattern 1"
+      },
+      {
+        "value": 1,
+        "label": "Pattern 2"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.OUTMODE": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.OUTMODE.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.OUTMODE.value": {
+    "type": "list",
+    "title": "OUT Mode",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Auto"
+      },
+      {
+        "value": 1,
+        "label": "Follow Signal"
+      },
+      {
+        "value": 2,
+        "label": "Folow Sink"
+      }
+    ]
+  },
+  "data.port.out.#.Brightness": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.Brightness.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.Brightness.value": {
+    "title": "Brightness",
+    "enabled": 1,
+    "min": 0,
+    "max": 63,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.Contrast": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.Contrast.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.Contrast.value": {
+    "title": "Contrast",
+    "enabled": 1,
+    "min": 0,
+    "max": 63,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.Hue": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.Hue.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.Hue.value": {
+    "title": "Hue",
+    "enabled": 1,
+    "min": 0,
+    "max": 63
+  },
+  "data.port.out.#.Color": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.Color.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.Color.value": {
+    "title": "Color",
+    "enabled": 1,
+    "min": 0,
+    "max": 63
+  },
+  "data.port.out.#.Sharpness": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.Sharpness.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.Sharpness.value": {
+    "title": "Sharpness",
+    "enabled": 1,
+    "min": 0,
+    "max": 63
+  },
+  "data.port.out.#.ColorTemperature": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.ColorTemperature.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.ColorTemperature.value": {
+    "title": "CCT (Color Temperature)",
+    "enabled": 1,
+    "min": 0,
+    "max": 63
+  },
+  "data.port.out.#.MotionContrast": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.MotionContrast.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.MotionContrast.value": {
+    "title": "Motion Contrast",
+    "enabled": 1,
+    "min": 0,
+    "max": 63
+  },
+  "data.port.out.#.GAMMA": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.GAMMA.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.GAMMA.value": {
+    "title": "GAMMA",
+    "enabled": 1,
+    "min": 0,
+    "max": 63
+  },
+  "data.port.out.#.VideoFilter": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.VideoFilter.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.VideoFilter.value": {
+    "title": "Video Filter",
+    "enabled": 1,
+    "min": 0,
+    "max": 15
+  },
+  "data.port.out.#.Ydelay": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.YDelay.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.YDelay.value": {
+    "title": "Y-Delay",
+    "enabled": 1,
+    "min": 0,
+    "max": 7
+  },
+  "data.port.out.#.PhaseAdjustment": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.PhaseAdjustment.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.PhaseAdjustment.value": {
+    "title": "Phase Adjustment",
+    "enabled": 1,
+    "min": 0,
+    "max": 63,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.GainAdjustment": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.GainAdjustment.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.GainAdjustment.value": {
+    "title": "Gain Adjustment",
+    "enabled": 1,
+    "min": 0,
+    "max": 128
+  },
+  "data.port.out.#.EqualizationAdjustment": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.EqualizationAdjustment.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.EqualizationAdjustment.value": {
+    "title": "Equalization Adjustment",
+    "enabled": 1,
+    "min": 0,
+    "max": 63
+  },
+  "data.port.out.#.EmphasisAdjustment": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.EmphasisAdjustment.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.EmphasisAdjustment.value": {
+    "title": "Emphasis Adjustment",
+    "enabled": 1,
+    "min": 0,
+    "max": 63
+  },
+  "data.port.out.#.CompensationAdjustment": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.CompensationAdjustment.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.CompensationAdjustment.value": {
+    "title": "Compensation Adjustment",
+    "enabled": 1,
+    "min": 0,
+    "max": 32
+  },
+  "data.port.out.#.FanStatus": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.FanStatus.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.FanStatus.value": {
+    "type": "list",
+    "title": "Fan status",
+    "list": [
+      {
+        "value": 0,
+        "label": "Normal"
+      },
+      {
+        "value": 1,
+        "label": "ERROR"
+      }
+    ]
+  },
+  "data.port.out.#.Reset": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.Reset.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.Reset.value": {
+    "type": "list",
+    "title": "Reset",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "": "Restart"
+      },
+      {
+        "value": 1,
+        "label": "Re-Power"
+      },
+      {
+        "value": 2,
+        "label": "Factory"
+      }
+    ],
+    "min": 0,
+    "max": 0,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.VideoFreeze": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.VideoFreeze.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.VideoFreeze.value": {
+    "type": "boolean",
+    "title": "Video freeze",
+    "enabled": 1,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.TVFormat": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.TVFormat.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.TVFormat.value": {
+    "type": "list",
+    "title": "TV Format",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Auto"
+      },
+      {
+        "value": 1,
+        "label": "PAL"
+      },
+      {
+        "value": 2,
+        "label": "NTSC"
+      },
+      {
+        "value": 3,
+        "label": "SECAM"
+      }
+    ]
+  },
+  "data.port.out.#.InputHorPosition": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.InputHorPosition.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.InputHorPosition.value": {
+    "title": "Input Hor-Position",
+    "enabled": 1,
+    "min": 0,
+    "max": 16383
+  },
+  "data.port.out.#.InputVerPosition": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.InputVerPosition.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.InputVerPosition.value": {
+    "title": "Input Ver-Position",
+    "enabled": 1,
+    "min": 0,
+    "max": 16383
+  },
+  "data.port.out.#.InputHorSize": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.InputHorSize.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.InputHorSize.value": {
+    "title": "Input Hor-Size",
+    "enabled": 1,
+    "min": 0,
+    "max": 16383
+  },
+  "data.port.out.#.InputVerSize": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.InputVerSize.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.InputVerSize.value": {
+    "title": "Input Ver-Size",
+    "enabled": 1,
+    "min": 0,
+    "max": 16383
+  },
+  "data.port.out.#.OutputHorPosition": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.OutputHorPosition.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.OutputHorPosition.value": {
+    "title": "Output Hor-Position",
+    "enabled": 1,
+    "min": 0,
+    "max": 16383
+  },
+  "data.port.out.#.OutputVerPosition": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.OutputVerPosition.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.OutputVerPosition.value": {
+    "title": "Output Ver-Position",
+    "enabled": 1,
+    "min": 0,
+    "max": 16383
+  },
+  "data.port.out.#.OutputHorSize": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.OutputHorSize.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.OutputHorSize.value": {
+    "title": "Output Hor-Size",
+    "enabled": 1,
+    "min": 0,
+    "max": 16383
+  },
+  "data.port.out.#.OutputVerSize": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.OutputVerSize.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.OutputVerSize.value": {
+    "title": "Output Ver-Size",
+    "enabled": 1,
+    "min": 0,
+    "max": 16383
+  },
+  "data.port.out.#.ZoomBHorPosition": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.ZoomBHorPosition.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.ZoomBHorPosition.value": {
+    "title": "Background Hor-Position (PIP Mode)",
+    "enabled": 1,
+    "min": 0,
+    "max": 16383
+  },
+  "data.port.out.#.ZoomBVerPosition": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.ZoomBVerPosition.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.ZoomBVerPosition.value": {
+    "title": "Background Ver-Position (PIP Mode)",
+    "enabled": 1,
+    "min": 0,
+    "max": 16383
+  },
+  "data.port.out.#.ZoomBHorSize": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.ZoomBHorSize.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.ZoomBHorSize.value": {
+    "title": "Background Hor-Size (PIP Mode)",
+    "enabled": 1,
+    "min": 0,
+    "max": 16383
+  },
+  "data.port.out.#.ZoomBVerSize": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.ZoomBVerSize.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.ZoomBVerSize.value": {
+    "title": "Background Ver-Size (PIP Mode)",
+    "enabled": 1,
+    "min": 0,
+    "max": 16383
+  },
+  "data.port.out.#.ZoomWHorPosition": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.ZoomWHorPosition.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.ZoomWHorPosition.value": {
+    "title": "Windows Hor-Position (PIP Mode)",
+    "enabled": 1,
+    "min": 0,
+    "max": 16383
+  },
+  "data.port.out.#.ZoomWVerPosition": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.ZoomWVerPosition.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.ZoomWVerPosition.value": {
+    "title": "Windows Ver-Position (PIP Mode)",
+    "enabled": 1,
+    "min": 0,
+    "max": 16383
+  },
+  "data.port.out.#.ZoomWHorSize": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.ZoomWHorSize.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.ZoomWHorSize.value": {
+    "title": "Windows Hor-Size (PIP Mode)",
+    "enabled": 1,
+    "min": 0,
+    "max": 16383
+  },
+  "data.port.out.#.ZoomWVerSize": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.ZoomWVerSize.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.ZoomWVerSize.value": {
+    "title": "Windows Ver-Size (PIP Mode)",
+    "enabled": 1,
+    "min": 0,
+    "max": 16383
+  },
+  "data.port.out.#.HorTotalPixels": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.HorTotalPixels.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.HorTotalPixels.value": {
+    "title": "Hor-Total Pixels",
+    "enabled": 1,
+    "min": 1,
+    "max": 7000,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.VerTotalPixels": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.VerTotalPixels.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.VerTotalPixels.value": {
+    "title": "Ver-Total Pixels",
+    "enabled": 1,
+    "min": 0,
+    "max": 16383,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.MaxInputPixelClk": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.MaxInputPixelClk.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.MaxInputPixelClk.value": {
+    "title": "Max Input Pixel Clock",
+    "enabled": 1,
+    "min": 0,
+    "max": 16383,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.HorizontalStart": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.HorizontalStart.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.HorizontalStart.value": {
+    "title": "Horizontal Start",
+    "enabled": 1,
+    "min": 1,
+    "max": 600,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.HorizontalActive": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.HorizontalActive.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.HorizontalActive.value": {
+    "title": "Horizontal Active",
+    "enabled": 1,
+    "min": 1,
+    "max": 4000,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.VerticalStart": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.VerticalStart.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.VerticalStart.value": {
+    "title": "Vertical Start",
+    "enabled": 1,
+    "min": 1,
+    "max": 255,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.VerticalActive": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.VerticalActive.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.VerticalActive.value": {
+    "title": "Vertical Active",
+    "enabled": 1,
+    "min": 1,
+    "max": 3000,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.DBChannels": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.DBChannels.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.DBChannels.value": {
+    "type": "list",
+    "title": "DB Channels Number",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Auto"
+      },
+      {
+        "value": 1,
+        "label": "1 Channels"
+      },
+      {
+        "value": 2,
+        "label": "2 Channels"
+      },
+      {
+        "value": 3,
+        "label": "4 Channels"
+      },
+      {
+        "value": 4,
+        "label": "8 Channels"
+      }
+    ]
+  },
+  "data.port.out.#.DPCP": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.DPCP.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.DPCP.value": {
+    "title": "DPCP",
+    "enabled": 1,
+    "min": 0,
+    "max": 128
+  },
+  "data.port.out.#.RestoreSetup": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.RestoreSetup.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.RestoreSetup.value": {
+    "title": "Save Timing",
+    "min": 0,
+    "max": 31,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.RecallSetup": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.RecallSetup.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.RecallSetup.value": {
+    "title": "Recall Setup",
+    "min": 0,
+    "max": 31,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.SwitchSpeed": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.SwitchSpeed.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.SwitchSpeed.value": {
+    "type": "list",
+    "title": "Switch Speed",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Normal"
+      },
+      {
+        "value": 1,
+        "label": "Fast"
+      },
+      {
+        "value": 2,
+        "label": "EX-Fast"
+      },
+      {
+        "value": 3,
+        "label": "Seamless"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.SwitchSpeed_1": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.SwitchSpeed_1.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.SwitchSpeed_1.value": {
+    "type": "list",
+    "title": "Switch Speed",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Normal"
+      },
+      {
+        "value": 1,
+        "label": "Fast"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.SwitchSpeed_2": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.SwitchSpeed_2.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.SwitchSpeed_2.value": {
+    "type": "list",
+    "title": "Switch Speed",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Normal"
+      },
+      {
+        "value": 1,
+        "label": "Fast"
+      },
+      {
+        "value": 2,
+        "label": "EX-Fast"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.SwitchSpeed_3": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.SwitchSpeed_3.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.SwitchSpeed_3.value": {
+    "type": "list",
+    "title": "Switch Speed",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Normal"
+      },
+      {
+        "value": 1,
+        "label": "Fast"
+      },
+      {
+        "value": 3,
+        "label": "Seamless"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.Volume": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.Volume.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.Volume.value": {
+    "title": "Volume ",
+    "enabled": 1,
+    "min": 0,
+    "max": 70,
+    "p3k": "#AUD-LVL {'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.BackgroundVolume": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.BackgroundVolume.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.BackgroundVolume.value": {
+    "title": "Background Volume",
+    "enabled": 1,
+    "min": 0,
+    "max": 100
+  },
+  "data.port.out.#.MICVolume": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.MICVolume.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.MICVolume.value": {
+    "title": "MIC Volume",
+    "enabled": 1,
+    "min": 0,
+    "max": 100
+  },
+  "data.port.out.#.AudioBalance": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.AudioBalance.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.AudioBalance.value": {
+    "title": "Balance",
+    "enabled": 1,
+    "min": 0,
+    "max": 100,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.BackgroundBalance": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.BackgroundBalance.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.BackgroundBalance.value": {
+    "title": "Background Balance",
+    "enabled": 1,
+    "min": 0,
+    "max": 100
+  },
+  "data.port.out.#.MICBalance": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.MICBalance.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.MICBalance.value": {
+    "title": "MIC Balance",
+    "enabled": 1,
+    "min": 0,
+    "max": 100
+  },
+  "data.port.out.#.AudioBass": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.AudioBass.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.AudioBass.value": {
+    "title": "Bass",
+    "enabled": 1,
+    "min": 0,
+    "max": 15,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.AudioTreble": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.AudioTreble.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.AudioTreble.value": {
+    "title": "Treble",
+    "enabled": 1,
+    "min": 0,
+    "max": 15,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.AudioSampleFreq": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.AudioSampleFreq.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.AudioSampleFreq.value": {
+    "type": "list",
+    "title": "Audio Sample Frequency",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Auto"
+      },
+      {
+        "value": 1,
+        "label": "44.1K"
+      },
+      {
+        "value": 2,
+        "label": "48K"
+      },
+      {
+        "value": 3,
+        "label": "88.2K"
+      },
+      {
+        "value": 4,
+        "label": "96K"
+      },
+      {
+        "value": 5,
+        "label": "176.4K"
+      },
+      {
+        "value": 6,
+        "label": "192K"
+      }
+    ]
+  },
+  "data.port.out.#.AudioSampleSize": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.AudioSampleSize.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.AudioSampleSize.value": {
+    "type": "list",
+    "title": "Audio Sample Size",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Auto"
+      },
+      {
+        "value": 1,
+        "label": "16Bits"
+      },
+      {
+        "value": 2,
+        "label": "20Bits"
+      },
+      {
+        "value": 3,
+        "label": "24Bits"
+      }
+    ]
+  },
+  "data.port.out.#.AudioMute": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.AudioMute.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.AudioMute.value": {
+    "type": "list",
+    "title": "Mute",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Mute"
+      },
+      {
+        "value": 1,
+        "label": "Non-Mute"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.AudioLoudness": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.AudioLoudness.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.AudioLoudness.value": {
+    "type": "boolean",
+    "title": "Loudness",
+    "enabled": 1
+  },
+  "data.port.out.#.AudioMixMode": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.AudioMixMode.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.AudioMixMode.value": {
+    "type": "boolean",
+    "title": "Mono",
+    "enabled": 1,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.AudioStereoMode": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.AudioStereoMode.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.AudioStereoMode.value": {
+    "type": "boolean",
+    "title": "Stereo Mode",
+    "enabled": 1
+  },
+  "data.port.out.#.AudioTalkOver": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.AudioTalkOver.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.AudioTalkOver.value": {
+    "type": "boolean",
+    "title": "Talk-Over Mode",
+    "enabled": 1
+  },
+  "data.port.out.#.AudioAuxDelay": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.AudioAuxDelay.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.AudioAuxDelay.value": {
+    "title": "Aux-Delay",
+    "enabled": 1,
+    "min": 0,
+    "max": 15
+  },
+  "data.port.out.#.AudioSelect": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.AudioSelect.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.AudioSelect.value": {
+    "type": "list",
+    "title": "Audio Select",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Auto"
+      },
+      {
+        "value": 1,
+        "label": "HDMI"
+      },
+      {
+        "value": 2,
+        "label": "Digital Audio"
+      },
+      {
+        "value": 3,
+        "label": "Analog Audio"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.AudioSelect_1": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.AudioSelect_1.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.AudioSelect_1.value": {
+    "type": "list",
+    "title": "Audio Select",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Auto"
+      },
+      {
+        "value": 1,
+        "label": "HDMI"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.AudioSelect_2": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.AudioSelect_2.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.AudioSelect_2.value": {
+    "type": "list",
+    "title": "Audio Select",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Auto"
+      },
+      {
+        "value": 1,
+        "label": "HDMI"
+      },
+      {
+        "value": 2,
+        "label": "Digital Audio"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.AudioSelect_3": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.AudioSelect_3.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.AudioSelect_3.value": {
+    "type": "list",
+    "title": "Audio Select",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Auto"
+      },
+      {
+        "value": 1,
+        "label": "HDMI"
+      },
+      {
+        "value": 3,
+        "label": "Analog Audio"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.AudioSelect_4": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.AudioSelect_4.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.AudioSelect_4.value": {
+    "type": "list",
+    "title": "Audio Select",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 1,
+        "label": "HDMI"
+      },
+      {
+        "value": 3,
+        "label": "Analog Audio"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.AudioSelect_5": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.AudioSelect_5.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.AudioSelect_5.value": {
+    "type": "list",
+    "title": "Audio Select",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Auto"
+      },
+      {
+        "value": 2,
+        "label": "Digital Audio"
+      },
+      {
+        "value": 3,
+        "label": "Analog Audio"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.Temperature": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.Temperature.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.Temperature.value": {
+    "title": "Temperature"
+  },
+  "data.port.out.#.Voltage": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.Voltage.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.Voltage.value": {
+    "title": "Voltage"
+  },
+  "data.port.out.#.R-offset": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.R-offset.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.R-offset.value": {
+    "title": "VGA R-Offset",
+    "enabled": 1,
+    "min": 0,
+    "max": 63,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.G-offset": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.G-offset.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.G-offset.value": {
+    "title": "VGA G-Offset",
+    "enabled": 1,
+    "min": 0,
+    "max": 63,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.B-offset": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.B-offset.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.B-offset.value": {
+    "title": "VGA B-Offset",
+    "enabled": 1,
+    "min": 0,
+    "max": 63,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.R-gain": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.R-gain.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.R-gain.value": {
+    "title": "VGA R-Gain",
+    "enabled": 1,
+    "min": 0,
+    "max": 63,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.G-gain": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.G-gain.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.G-gain.value": {
+    "title": "VGA G-Gain",
+    "enabled": 1,
+    "min": 0,
+    "max": 63,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.B-gain": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.B-gain.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.B-gain.value": {
+    "title": "VGA B-Gain",
+    "enabled": 1,
+    "min": 0,
+    "max": 63,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.XTRA_0=ON_1=OFF": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.XTRA_0=ON_1=OFF.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.XTRA_0=ON_1=OFF.value": {
+    "type": "list",
+    "title": "XTRA",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "ON"
+      },
+      {
+        "value": 1,
+        "label": "OFF"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.XTRA_0Y_1N_2AUTO": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.XTRA_0Y_1N_2AUTO.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.XTRA_0Y_1N_2AUTO.value": {
+    "type": "list",
+    "title": "XTRA",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "ON"
+      },
+      {
+        "value": 1,
+        "label": "OFF"
+      },
+      {
+        "value": 2,
+        "label": "Auto"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.ST_0IN_1OUT": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.ST_0IN_1OUT.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.ST_0IN_1OUT.value": {
+    "type": "list",
+    "title": "Analog Audio Port (3.5 Port) Setting",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "IN"
+      },
+      {
+        "value": 1,
+        "label": "OUT"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.ST_0IN_1OUT_2ARC": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.ST_0IN_1OUT_2ARC.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.ST_0IN_1OUT_2ARC.value": {
+    "type": "list",
+    "title": "Analog Audio Port (3.5 Port) Setting",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "IN"
+      },
+      {
+        "value": 1,
+        "label": "OUT"
+      },
+      {
+        "value": 2,
+        "label": "ARC"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.HDCP_0=EN_1=DIS": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.HDCP_0=EN_1=DIS.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.HDCP_0=EN_1=DIS.value": {
+    "type": "list",
+    "title": "HDCP",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "HDCP ON"
+      },
+      {
+        "value": 1,
+        "label": "HDCP OFF"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.OUT_HSYNC_INVERT": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.OUT_HSYNC_INVERT.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.OUT_HSYNC_INVERT.value": {
+    "title": "VGA Out HSYNC invert",
+    "enabled": 1,
+    "min": 0,
+    "max": 1,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.OUT_VSYNC_INVERT": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.OUT_VSYNC_INVERT.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.OUT_VSYNC_INVERT.value": {
+    "title": "VGA Out VSYNC invert",
+    "enabled": 1,
+    "min": 0,
+    "max": 1,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.SDI_AUDIO_SWITCH": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.SDI_AUDIO_SWITCH.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.SDI_AUDIO_SWITCH.value": {
+    "title": "SDI Audio Select",
+    "enabled": 1,
+    "min": 0,
+    "max": 15,
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.PictureAspectRatio": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.PictureAspectRatio.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.PictureAspectRatio.value": {
+    "type": "list",
+    "title": "Picture Aspect Ratio",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "Full"
+      },
+      {
+        "value": 1,
+        "label": "Crop"
+      },
+      {
+        "value": 2,
+        "label": "Best-fit"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.FPGAVER_7D-05": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.FPGAVER_7D-05.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.FPGAVER_7D-05.value": {
+    "type": "list",
+    "title": "FPGA Version",
+    "list": [
+      {
+        "value": 0,
+        "label": "7D-05"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.FWVER_4.2_0000": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.FWVER_4.2_0000.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.FWVER_4.2_0000.value": {
+    "type": "list",
+    "title": "FW Version",
+    "list": [
+      {
+        "value": 0,
+        "label": "4.2.0"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.AutoSyncOff": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.AutoSyncOff.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.AutoSyncOff.value": {
+    "type": "list",
+    "title": "Auto SYNC OFF (Out 5V)",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "disable"
+      },
+      {
+        "value": 1,
+        "label": "slow-5min"
+      },
+      {
+        "value": 2,
+        "label": "fast-10s"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  },
+  "data.port.out.#.OutResolution": {
+    "hideTitle": 1
+  },
+  "data.port.out.#.OutResolution.sid": {
+    "hide": 1
+  },
+  "data.port.out.#.OutResolution.value": {
+    "type": "list",
+    "title": "Out Resolution",
+    "enabled": 1,
+    "list": [
+      {
+        "value": 0,
+        "label": "640x480x60"
+      },
+      {
+        "value": 1,
+        "label": "1024x768x60"
+      },
+      {
+        "value": 2,
+        "label": "1280x1024x60"
+      },
+      {
+        "value": 6,
+        "label": "1600x1200x60"
+      },
+      {
+        "value": 7,
+        "label": "1920x1080Px60"
+      },
+      {
+        "value": 8,
+        "label": "1920x1080Px50"
+      },
+      {
+        "value": 11,
+        "label": "1280x720Px60"
+      },
+      {
+        "value": 12,
+        "label": "1280x720Px50"
+      },
+      {
+        "value": 13,
+        "label": "720x480Px60"
+      },
+      {
+        "value": 14,
+        "label": "800x600x60"
+      },
+      {
+        "value": 17,
+        "label": "1920x1200x60"
+      },
+      {
+        "value": 23,
+        "label": "720x576Px50"
+      },
+      {
+        "value": 56,
+        "label": "Native"
+      }
+    ],
+    "p3k": "#module-func [sid],{'[dir]'=='in' ? 0 : 1},[typeid],[value]"
+  }
+}

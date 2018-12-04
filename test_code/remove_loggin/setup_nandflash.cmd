@@ -1,5 +1,5 @@
 cd /home/root
-tftp -g -r nandflash.tar 192.168.20.35
+tftp -g -r nandflash.tar 192.168.20.127
 rm /nandflash/* -rf
 rm /nandflash/.[!.]* -rf
 

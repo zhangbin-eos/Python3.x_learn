@@ -1,0 +1,95 @@
+{
+  "key": {
+    "row": 0,
+    "col": 0,
+    "col-wth":50,
+    "comment": "key"
+  },
+  "type": {
+    "row": 0,
+    "col": 1,
+    "col-wth":10,
+    "comment": "type"
+  },
+  "title": {
+    "row": 0,
+    "col": 2,
+    "col-wth":20,
+    "comment": "Title Text for label"
+  },
+  "enabled": {
+    "row": 0,
+    "col": 3,
+    "col-wth":10,
+    "comment": "enabled default value:0"
+  },
+  "hideTitle": {
+    "row": 0,
+    "col": 4,
+    "col-wth":10,
+    "comment": "hide Title default value:0"
+  },
+  "hide": {
+    "row": 0,
+    "col": 5,
+    "col-wth":10,
+    "comment": "Hide default value:0"
+  },
+  "label_style_default": {
+    "row": 0,
+    "col": 6,
+    "col-wth":10,
+    "comment": "label styledefault value:\"\""
+  },
+  "input_style_default": {
+    "row": 0,
+    "col": 7,
+    "col-wth":10,
+    "comment": "input style default value:\"\""
+  },
+  "list": {
+    "row": 0,
+    "col": 8,
+    "comment": "List (for type list only) [1,2,3] or [\"A\",\"B\"]"
+  },
+  "min": {
+    "row": 0,
+    "col": 9,
+    "col-wth":10,
+    "comment": "minimum (for numbers)"
+  },
+  "max": {
+    "row": 0,
+    "col": 10,
+    "col-wth":10,
+    "comment": "maximum (for numbers)"
+  },
+  "p3k": {	
+  	"row":  0,
+	"col": 11,
+	"col-wth":50,
+	"comment": "p3k"
+},
+  "priority":{
+	"row":  0,
+	"col": 12,
+	"comment": "priority"
+  },
+  "regexpr": {
+    "row":  0,
+    "col": 13,
+    "col-wth":50,
+    "comment": "regexpr"
+  },
+  "optional": {
+    "row": 0,
+    "col": 14,
+    "comment": "optional"
+  },
+  "mark": {
+    "row": 0,
+    "col": 15,
+    "col-wth":10,
+    "comment": "Mark"
+  }
+}
