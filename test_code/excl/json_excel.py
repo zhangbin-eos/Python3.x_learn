@@ -3,7 +3,7 @@
 import xlwt
 import xlrd
 import json
-excl_name='metadata.xlsx'
+excl_name='metadata.xls'
 workbook = xlwt.Workbook(encoding = 'ascii')
 worksheet = workbook.add_sheet('My Worksheet')
 
@@ -47,4 +47,4 @@ for key,index in zip(metadata_dict,range(len(metadata_dict))):
             
 print(len(metadata_dict))
 
-workbook.save('Excel_Workbook.xls')
+workbook.save(excl_name)
