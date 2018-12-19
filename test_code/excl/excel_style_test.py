@@ -44,13 +44,14 @@ for key,value in excel_title_dict.items():
     else:
         col.width=256*len(value["comment"])
     style = xlwt.easyxf('align: wrap on')
-    style.pattern.pattern_back_colour=""
-    print(style.pattern.pattern.imag)
+    style.pattern.pattern_back_colour=1
     worksheet.write(value["row"]+2,
                     value["col"],
                     value["comment"],style)
 
 style = xlwt.easyxf('align: wrap on')
+help(style.pattern)
+help(style.pattern.pattern_back_colour)
 print(style)
 
 workbook.save(excl_name)
