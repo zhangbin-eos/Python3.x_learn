@@ -2,33 +2,27 @@
 #this is test the Serial Moudles
 import  serial
 import  time
-ser=serial.Serial('COM6');#打开串口1
-ser.baudrate=115200;
-ser.timeout=3; print(ser.timeout);
-ser.inter_byte_timeout=0.5; print(ser.inter_byte_timeout);
-print(ser);
+import sys
 
-ser.write(b"#model?\r\n");
-print(ser.read_until());
+if __name__=='__main__':
+	if len(sys.argv)<3:
+		print("Usage:",sys.argv[0],"[serial] [serverip] ")
+		print("Such as: ",sys.argv[0]," COM4 192.168.20.135 ")
+		sys.exit();
 
-i=1
-while i <= 34 :
-    if i < 17 :
-        io=0
-    else :
-        io=1
-    
-    write_data='#EXT-PORT-DIR 1,'+ str(i) + ',' + str(io) + '\r\n'
-    ser.write(write_data.encode());
-    read_data=ser.read_until();
-    print(read_data)
-    i=i+1;
-ser.read_all()
+	devname  =  sys.argv[1] 
+	serverip =  sys.argv[2] 
+	username = 'root\n'  
+	password = '123456\n'	
 
-ser.write(b"#vid 1>*\r\n");
-print(ser.read_until());
-time.sleep(5)
-ser.write(b"#vid 2>*\r\n");
-print(ser.read_until());
+	ser=serial.Serial(devname);
+	ser.baudrate=115200;
+	ser.timeout=10; 
+	ser.inter_byte_timeout=0.5; 
 
-ser.close();
+	print(ser.read_until(b'Hit any key to stop autoboot'));
+	#time.sleep(5)
+	# ser.write(write_data.encode());
+	#
+	ser.close();
+	sys.exit();

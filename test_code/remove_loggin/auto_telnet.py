@@ -21,17 +21,13 @@ def do_telnet(Host, username, password, finish, commands):
   
 if __name__=='__main__':
     if len(sys.argv)<3:
-        print("Usage:",sys.argv[0],"[ip] [cmdfile]")
+        print("Usage:",sys.argv[0],"[serverip]")
         sys.exit();
     
     Host =  sys.argv[1] 
     username = 'root\n'  
     password = '123456\n'    
-    finish = ':~#'   
-    #read cmd shell file
-    commands=list()
-    for line in open(sys.argv[2],'rt'): 
-        commands.append(line)
+
     
-    do_telnet(Host, username, password, finish, commands) 
+
     sys.exit();
