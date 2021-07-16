@@ -140,14 +140,10 @@ help(serial.Serial)
 
 
 
+len()
 
 
-
-
-
-
-
-
-
+for i in range(0,len(xlist)):
+	
 
 

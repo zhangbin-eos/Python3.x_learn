@@ -15,7 +15,7 @@ if __name__=='__main__':
 	username = 'root\n'  
 	password = '123456\n'	
 
-	ser=serial.Serial(devname);
+	ser=serial.serial(devname);
 	ser.baudrate=115200;
 	ser.timeout=10; 
 	ser.inter_byte_timeout=0.5; 
